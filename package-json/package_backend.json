@@ -1,0 +1,51 @@
+{
+  "name": "courtql",
+  "description": "CourtQL",
+  "license": "UNLICENSED",
+  "main": "server.js",
+  "version": "1.0.0",
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.13",
+    "@graphql-tools/utils": "^7.10.0",
+    "apollo-server-express": "^3.8.0",
+    "axios": "^0.27.2",
+    "box-node-sdk": "^2.3.0",
+    "dataloader": "^2.1.0",
+    "deepmerge": "^4.2.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "graphql": "^15.7.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "tedious": "6.1.2",
+    "tedious-promises": "^0.4.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.2"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "jsxSingleQuote": true,
+    "printWidth": 80,
+    "quoteProps": "as-needed",
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://cfsr.sso.dcn:txw/txw-data-api.git"
+  },
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "prepare": "husky install",
+    "pretty-quick": "pretty-quick --staged --pattern \"**/*.*(js|jsx)\" --bail",
+    "start": "rm .env && node ./src/index.js"
+  }
+}
