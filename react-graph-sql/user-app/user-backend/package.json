@@ -1,0 +1,28 @@
+{
+  "name": "courtql",
+  "description": "CourtQL",
+  "license": "UNLICENSED",
+  "main": "server.js",
+  "version": "1.0.0",
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.13",
+    "@graphql-tools/utils": "^7.10.0",
+    "apollo-server-express": "^3.8.0",
+    "box-node-sdk": "^2.3.0",
+    "dataloader": "^2.1.0",
+    "deepmerge": "^4.2.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "graphql": "^15.7.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.16",
+    "tedious": "6.1.2",
+    "tedious-promises": "^0.4.1"
+  },
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "prepare": "husky install",
+    "start": "rm .env && node ./src/index.js"
+  }
+}
